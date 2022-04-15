@@ -10,7 +10,7 @@ public class SDDDrive implements Drive {
 
     @Override
     public void addFile(File file) {
-        fileMap.put(file.toString(), file);
+        fileMap.put(file.getName(), file);
 
     }
 

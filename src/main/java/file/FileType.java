@@ -1,6 +1,6 @@
 package file;
 
 public enum FileType {
-    MUSIC, IMAGE
+    MUSIC, IMAGE, VIDEO
 
 }

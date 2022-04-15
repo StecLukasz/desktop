@@ -1,28 +1,23 @@
-import USBDevice.Mouse;
-import USBDevice.Pendrive;
-import drives.HDDDrive;
 import drives.SDDDrive;
-
-import java.io.File;
+import file.imageFile.GIFImageFile;
+import file.imageFile.JPGImageFile;
+import file.musicFile.MP3;
 
 public class Main {
     public static void main(String[] args) {
-        Monitor monitor = new Monitor();
-//        HDDDrive drive = new HDDDrive();
+
+        GIFImageFile gif = new GIFImageFile("nowy gifffek",100);
+        JPGImageFile jpg = new JPGImageFile("cos tam 1", 400, 9);
+        MP3 mp3 = new MP3("mp3", 2, "aa", "bb", 99);
+
+
         SDDDrive drive = new SDDDrive();
+        drive.addFile(gif);
+        drive.addFile(jpg);
+        drive.addFile(mp3);
 
-
-        Computer computer = new Computer(monitor, drive);
-
-
-//        drive.addFile(new file.File("coś nowego 2"));
-//        drive.listFiles();
-
-        Pendrive pendrive = new Pendrive("Pendrive");
-        Mouse mouse = new Mouse("mysz");
-
-        computer.addUSBDevice(pendrive);
-        computer.addUSBDevice(mouse);
-        computer.removeDevice(pendrive);
+        drive.listFiles();
+        drive.findFile("mp3");
     }
+
 }

@@ -46,13 +46,15 @@ public class Computer {
     private List<USBDevice> getUsbDevices() {
         return usbDevices;
     }
-    public void addUSBDevice(USBDevice usbDevice){
+
+    public void addUSBDevice(USBDevice usbDevice) {
         boolean isConnected = usbDevice.connect();
-        if (isConnected){
+        if (isConnected) {
             usbDevices.add(usbDevice);
         }
     }
-    public void removeDevice(USBDevice usbDevice){
+
+    public void removeDevice(USBDevice usbDevice) {
         boolean isDisconected = usbDevice.disconnect();
         if ((isDisconected)) {
             System.out.println("Pendrive removed by force");
