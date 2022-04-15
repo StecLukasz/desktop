@@ -1,6 +1,7 @@
 package drives;
 
-import java.io.File;
+
+import file.File;
 
 public interface Drive {
     void addFile(File file);

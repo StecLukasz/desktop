@@ -12,12 +12,14 @@ public class Main {
 
 
         SDDDrive drive = new SDDDrive();
+
         drive.addFile(gif);
         drive.addFile(jpg);
         drive.addFile(mp3);
 
         drive.listFiles();
         drive.findFile("mp3");
+        System.out.println(gif.getSize());
     }
 
 }
